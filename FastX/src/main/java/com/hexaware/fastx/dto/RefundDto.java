@@ -15,20 +15,14 @@ import lombok.Setter;
 @Setter
 @Schema
 public class RefundDto {
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long refundId;
 
-    @Schema(example = "599.0")
     private Double refundAmount;
 
-    @Schema(example = "2026-07-02T14:00:00")
     private LocalDateTime refundDate;
 
-    @Schema(example = "PENDING",
-            allowableValues = {"PENDING", "APPROVED", "REJECTED", "PROCESSED"})
     private String refundStatus;
 
     @NotNull(message = "Booking ID is required")
-    @Schema(example = "1")
     private Long bookingId;
 }

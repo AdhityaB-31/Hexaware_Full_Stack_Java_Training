@@ -16,40 +16,31 @@ import lombok.Setter;
 @Setter
 @Schema
 public class UserDto {
-
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
+	
     private Long userId;
 
     @NotBlank(message = "Full name is required")
-    @Schema(example = "Adhitya")
     private String fullName;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email should be valid")
-    @Schema(example = "adhitya@example.com")
     private String email;
 
     @NotBlank(message = "Password is required")
     @Size(min = 6, message = "Password must be at least 6 characters")
-    @Schema(example = "Pass@123")
     private String password;
 
     @NotBlank(message = "Phone number is required")
     @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be exactly 10 digits")
-    @Schema(example = "9876543210")
     private String phoneNumber;
 
     @Pattern(regexp = "^(MALE|FEMALE|OTHER)$", message = "Gender must be MALE, FEMALE, or OTHER")
-    @Schema(example = "MALE", allowableValues = {"MALE", "FEMALE", "OTHER"})
     private String gender;
 
     @NotBlank(message = "Address is required")
-    @Schema(example = "123, Main Street, Chennai")
     private String address;
 
-    @Schema(example = "true")
     private Boolean isActive;
 
-    @Schema(example = "2")
     private Long roleId;
 }

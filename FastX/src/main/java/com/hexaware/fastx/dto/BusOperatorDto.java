@@ -17,32 +17,25 @@ import lombok.Setter;
 @Schema
 public class BusOperatorDto {
 
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long operatorId;
 
     @NotBlank(message = "Company name is required")
-    @Schema(example = "FastX Travels Pvt Ltd")
     private String companyName;
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email should be valid")
-    @Schema(example = "info@fastxtravels.com")
     private String email;
 
     @NotBlank(message = "Password is required")
     @Size(min = 6, message = "Password must be at least 6 characters")
-    @Schema(example = "Operator@123")
     private String password;
 
     @NotBlank(message = "Phone number is required")
     @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be exactly 10 digits")
-    @Schema(example = "9876543210")
     private String phoneNumber;
 
     @NotBlank(message = "Address is required")
-    @Schema(example = "456, Transport Nagar, Chennai")
     private String address;
 
-    @Schema(example = "true")
     private Boolean isActive;
 }

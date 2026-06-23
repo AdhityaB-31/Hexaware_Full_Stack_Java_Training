@@ -13,11 +13,8 @@ import lombok.Setter;
 @Setter
 @Schema
 public class RoleDto {
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long roleId;
 
     @NotBlank(message = "Role name is required")
-    @Schema(example = "ADMIN",
-            allowableValues = {"ADMIN", "USER"})
     private String roleName;
 }

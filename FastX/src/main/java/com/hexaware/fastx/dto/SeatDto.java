@@ -14,28 +14,18 @@ import lombok.Setter;
 @Setter
 @Schema
 public class SeatDto {
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long seatId;
 
     @NotBlank(message = "Seat number is required")
-    @Schema(example = "B1-LB-01")
     private String seatNumber;
 
     @NotBlank(message = "Seat type is required")
-    @Schema(example = "LOWER_BERTH",
-            allowableValues = {"LOWER_BERTH", "UPPER_BERTH", "SIDE_LOWER", "SIDE_UPPER",
-                    "WINDOW_SEAT", "AISLE_SEAT", "MIDDLE_SEAT"})
     private String seatType;
 
-    @Schema(example = "AVAILABLE",
-            allowableValues = {"AVAILABLE", "RESERVED", "BOOKED"})
     private String seatStatus;
 
     @NotNull(message = "Bus ID is required")
-    @Schema(example = "1")
     private Long busId;
 
-    // Shows which booking reserved this seat
-    @Schema(example = "1")
     private Long reservedByBookingId;
 }

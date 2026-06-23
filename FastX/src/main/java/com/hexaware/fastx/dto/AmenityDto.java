@@ -14,10 +14,8 @@ import lombok.Setter;
 @Schema
 public class AmenityDto {
 
-    @Schema(example = "1", accessMode = Schema.AccessMode.READ_ONLY)
     private Long amenityId;
 
     @NotBlank(message = "Amenity name is required")
-    @Schema(example = "WiFi")
     private String amenityName;
 }
