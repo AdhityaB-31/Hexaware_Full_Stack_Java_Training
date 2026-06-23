@@ -41,10 +41,8 @@ import com.hexaware.fastx.service.SeatService;
 @Transactional
 public class BookingServiceImpl implements BookingService {
 
-    // Logger using Log4j (SLF4J) - creates a logger for this class
     private static final Logger logger = LoggerFactory.getLogger(BookingServiceImpl.class);
 
-    // Reservation timeout in minutes - seats are held for 30 minutes waiting for payment
     private static final int RESERVATION_TIMEOUT_MINUTES = 30;
 
     @Autowired
