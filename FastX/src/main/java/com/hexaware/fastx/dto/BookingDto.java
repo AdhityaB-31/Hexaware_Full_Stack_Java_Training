@@ -44,8 +44,6 @@ public class BookingDto {
     @Schema(example = "1")
     private Long busId;
 
-    // @Valid cascades validation into each PassengerDto in the list
-    // @Size ensures at least 1 passenger is provided
     @Valid
     @NotNull(message = "Passengers list is required")
     @Size(min = 1, message = "At least one passenger is required")

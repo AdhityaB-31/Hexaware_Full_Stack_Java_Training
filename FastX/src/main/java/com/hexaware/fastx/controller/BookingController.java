@@ -50,4 +50,9 @@ public class BookingController {
     public ResponseEntity<Double> calculateFare(@RequestParam Long busId, @RequestParam int numberOfSeats) {
         return new ResponseEntity<>(bookingService.calculateFare(busId, numberOfSeats), HttpStatus.OK);
     }
+    
+    @GetMapping("/count/{bookingId}")
+    public ResponseEntity<Long> countPassengerByBookingId(@PathVariable Long bookingId){
+    	return new ResponseEntity<>(bookingService.countPassengerByBookingId(bookingId),HttpStatus.OK);
+    }
 }

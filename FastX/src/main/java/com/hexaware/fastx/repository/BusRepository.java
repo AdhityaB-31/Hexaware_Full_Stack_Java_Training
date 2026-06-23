@@ -22,9 +22,4 @@ public interface BusRepository extends JpaRepository<Bus, Long> {
 
 	List<Bus> findTop5ByOrderByFareAsc();
 
-	/*
-	 * @Query(value = """ SELECT bus_id, SUM(total_amount) FROM bookings GROUP BY
-	 * bus_id ORDER BY SUM(total_amount) DESC LIMIT 5 """, nativeQuery = true)
-	 * 
-	 * List<Object[]> getTopRevenueBuses();
-	 */}
+}

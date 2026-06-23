@@ -11,4 +11,5 @@ public interface BookingService {
     BookingDto getBookingById(Long bookingId);
     List<BookingDto> getBookingsByUser(Long userId);
     Double calculateFare(Long busId, int numberOfSeats);
+    Long countPassengerByBookingId(Long bookingId);
 }

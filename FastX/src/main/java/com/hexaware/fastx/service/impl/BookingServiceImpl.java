@@ -283,10 +283,6 @@ public class BookingServiceImpl implements BookingService {
         return fare;
     }
 
-    /**
-     * Expires a booking and releases its reserved seats.
-     * Called when a user tries to confirm/pay after the 30-minute window has passed.
-     */
     @Transactional
     public void expireBooking(Booking booking) {
         logger.info("Expiring Booking ID: {} - reservation window has passed", booking.getBookingId());
@@ -333,4 +329,10 @@ public class BookingServiceImpl implements BookingService {
 
         return dto;
     }
+
+	@Override
+	public Long countPassengerByBookingId(Long bookingId) {
+		logger.info("Fetching Passenger Count with booking ID: {}", bookingId);
+		return passengerRepository.countPassengersByBookingId(bookingId);
+	}
 }
