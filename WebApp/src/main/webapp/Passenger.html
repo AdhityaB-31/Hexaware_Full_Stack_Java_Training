@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Passenger Registration</title>
+</head>
+<body>
+
+    <h1>Passenger Registration Form</h1>
+
+    <form action="PassengerServlet" method="get">
+
+        Passenger Id:
+        <input type="number" name="pid"><br><br>
+
+        Passenger Name:
+        <input type="text" name="pname"><br><br>
+
+        Age:
+        <input type="number" name="age"><br><br>
+
+        Gender:
+        <select name="gender">
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+            <option value="OTHER">Other</option>
+        </select><br><br>
+
+        <input type="submit" value="Send Using GET">
+
+    </form>
+
+    
+
+</body>
+</html>

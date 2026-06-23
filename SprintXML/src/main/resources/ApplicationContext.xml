@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="user1" class="com.hexaware.SprintXML.bean.User">
+        <property name="userId" value="1"/>
+        <property name="username" value="Adhitya"/>
+        <property name="email" value="adhitya@example.com"/>
+        <property name="contactNumber" value="9876543210"/>
+    </bean>
+
+
+    <bean id="bus1" class="com.hexaware.SprintXML.bean.Bus">
+        <property name="busId" value="101"/>
+        <property name="busName" value="Chennai Express"/>
+        <property name="totalSeats" value="40"/>
+        <property name="busType" value="AC Sleeper"/>
+    </bean>
+
+</beans>
