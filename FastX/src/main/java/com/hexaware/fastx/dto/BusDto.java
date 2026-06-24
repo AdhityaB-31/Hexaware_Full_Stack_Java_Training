@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -19,7 +18,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Schema
 public class BusDto {
 
     private Long busId;

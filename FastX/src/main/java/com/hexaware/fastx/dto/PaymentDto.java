@@ -2,7 +2,6 @@ package com.hexaware.fastx.dto;
 
 import java.time.LocalDateTime;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -14,7 +13,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Schema
 public class PaymentDto {
 
     private Long paymentId;

@@ -1,6 +1,5 @@
 package com.hexaware.fastx.dto;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -15,7 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-@Schema
 public class PassengerDto {
 
     private Long passengerId;
